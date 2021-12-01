@@ -8,18 +8,28 @@
                 display: flex;
         color: white;  
         background: rgba(0, 0, 0, 0.5);
-        width: 100px;
+        width: 150px;
         border: 5px solid white;
         border-radius: 5px;
         margin: 10px;
-        padding: 50px;
-        height: 100px;
+        padding: 10px;
+        height: 200px;
         align-content: stretch;
         justify-content: center;
         flex-direction: column;
         }
-        .Instructions:hover{
-            color: blue;
+
+        #attack:hover{
+            color:red;
+        }
+        #objet:hover{
+            color:red;
+        }
+        #sortilèges:hover{
+            color:red;
+        }
+        #fuite:hover{
+            color:red;
         }
         div.Instructions {
         display: flex;
@@ -28,16 +38,16 @@
         width: 200px;
         border: 5px solid white;
         border-radius: 5px;
-        margin: 10px;
-        padding: 10px;
-        height: 300px;
+        margin: 5px;
+        padding: 5px;
+        
         flex-direction:row ;
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: nowrap;
         flex-direction: column;
         position: relative;
-        top: 450px;}
+        top: 350px;}
 
         div.Noms {
         display: flex;
@@ -88,12 +98,12 @@
             </div>
 
             <div class="Instructions">
-            <p><h1>
-            <a>Attaque</a>
-            <a>Objets</a>
-            <a>Sortilèges</a>
-            <a>Fuite</a>
-        </h1></p>
+            <h1>
+            <a id=attack>Attaque</a>
+            <a id=objet>Objets</a>
+            <a id=sortilèges>Sortilèges</a>
+            <a id=fuite>Fuite</a>
+        </h1>
             </div> 
             
             <div class="Noms"> 
