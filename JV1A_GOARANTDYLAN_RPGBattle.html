@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript"  src="JV1A_GOARANTDylan_UIRPGBATTLE.js" async></script>
+        <style type="text/css">
+        body{background-image: url('http://img1.wikia.nocookie.net/__cb20121009014205/finalfantasy/images/b/b0/FFIV_PSP_Cave_Battle.png');
+        background-repeat: no-repeat;
+        background-size: cover;}
+             
+		    div.objectifs {
+                display: flex;
+        color: white;  
+        background: rgba(0, 0, 0, 0.5);
+        width: 150px;
+        border: 5px solid grey;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+        height: 150px;
+        align-content: stretch;
+        justify-content: center;
+        flex-direction: column;
+        position:relative;
+        left: -10px;
+        top: -5px;
+        }
+
+        #attack:hover{
+            color:red;
+        }
+        #defendre:hover{
+            color:red;
+        }
+        #sortilèges:hover{
+            color:red;
+        }
+
+        
+        div.Instructions {
+        display: flex;
+        color: white;  
+        background: rgba(0, 0, 0, 0.5);
+        width: 100px;
+        border: 5px solid grey;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 5px;
+        
+        flex-direction:flex-end ;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        position: absolute;
+        top: 750px;
+        left: -2px}
+
+        div.Noms {
+        display: flex;
+        display: inline-block;
+        color: white;  
+        background: rgba(0, 0, 0, 0.5);
+        width: 300px;
+        border: 5px solid grey;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 5px;
+        height: 200px;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: absolute;
+        top: 705px;
+        left: 1585px;
+        flex-wrap: wrap;
+        }
+       
+        #statsheros4{
+            display: flex;
+            position: absolute;
+            left: auto;
+            top: auto;
+            color: black;
+            padding: auto;
+            width: auto ;
+            height: auto;
+            margin: auto;
+            border:5px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+        .Heros_4{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            left: 1700px;
+            top: 200px;
+        }
+
+        .Heros_4:hover #statsheros4{
+            visibility: visible;
+        }
+
+
+        #statsheros1{
+            display: flex;
+            position: absolute;
+            left: auto;
+            top: auto;
+            color: black;
+            padding: auto;
+            width: auto ;
+            height: auto;
+            margin: auto;
+            border:5px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+        .Heros_1{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            left: 1700px;
+            top: 400px;
+        }
+
+        .Heros_1:hover #statsheros1{
+            visibility: visible;
+        }
+        #statsheros3{
+            display: flex;
+            position: absolute;
+            left: auto;
+            top: auto;
+            color: black;
+            padding: auto;
+            width: auto ;
+            height: auto;
+            margin: auto;
+            border:5px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+
+        .Heros_3{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            left: 1600px;
+            top: 200px;
+        }
+
+        .Heros_3:hover #statsheros3{
+            visibility: visible;}
+            #statsheros2{
+            display: flex;
+            position: absolute;
+            left: auto;
+            top: auto;
+            color: black;
+            padding: auto;
+            width: auto ;
+            height: auto;
+            margin: auto;
+            border:5px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+
+        #statsheros2{
+            display: flex;
+            position: absolute;
+            left: auto;
+            top: auto;
+            color: black;
+            padding: auto;
+            width: auto ;
+            height: auto;
+            margin: auto;
+            border:5px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+
+        .Heros_2{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            left: 1600px;
+        }
+
+        .Heros_2:hover #statsheros2{
+            visibility: visible;}
+        div.personnages {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #statsEnnemis1{
+            display: flex;
+            position: absolute;
+            left: auto;
+            top: auto;
+            color: black;
+            padding: auto;
+            width: auto ;
+            height: auto;
+            margin: auto;
+            border:5px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+
+        .Ennemis_1{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            left: 300px;
+            top: 200px
+        }
+
+        .Ennemis_1:hover #statsEnnemis1{
+            visibility: visible;}
+
+            #statsEnnemis2{
+            display: flex;
+            position: absolute;
+            left: auto;
+            top: auto;
+            color: black;
+            padding: auto;
+            width: auto ;
+            height: auto;
+            margin: auto;
+            border:5px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+
+        .Ennemis_2{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            left: 300px;
+            top: 400px
+        }
+
+        .Ennemis_2:hover #statsEnnemis2{
+            visibility: visible;}
+
+            #statsEnnemis3{
+            display: flex;
+            position: absolute;
+            left: auto;
+            top: auto;
+            color: black;
+            padding: auto;
+            width: 85px ;
+            height: auto;
+            margin: auto;
+            border:5px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+
+        .Ennemis_3{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            left: 400px;
+            top: 200px
+        }
+
+        .Ennemis_3:hover #statsEnnemis3{
+            visibility: visible;}
+
+        div.Ennemis {
+            display: flex;
+            flex-direction: column;
+            width: 80px;
+            height: 40px;
+        }
+        
+        .dialogue {
+            display: inline-block;
+            color: white;
+            padding: 5 px;
+            margin: 5px;
+            border: 5px solid grey;
+            border-radius: 5px;
+            height: 150px;
+            width: 200px;
+            background-color: black ;
+
+        }
+            
+        
+
+
+
+        
+            </style> 
+    </head>
+        <body>
+            
+            
+        
+            <div class="objectifs">
+            <h1>Objectifs:</h1>
+            <h2>kill soldiers</h2>
+
+            </div>
+
+            <div class="Instructions">
+            <h1>
+            <input type="button" id="attack" class="Instructions" value="Attaque"></input>
+            <input type="button" id="defendre" class="Instructions" value="Défendre"></input>
+            <input type="button" id="sortilèges" class="Instrutions" value="Sortilèges"></input>
+        </h1>
+            </div> 
+            
+            <div class="Noms"> 
+            <h2>ryuk</h2>
+            <h2>sana</h2>
+            <h2>izaru</h2>
+            <h2>galio</h2>
+            </div>
+            <div class="Ennemis">
+                <div class="Ennemis_1">
+                    <img src="dark_soldier-dragonrider_0 (2).png">
+                    <span id="statsEnnemis1">Cavalier PV :
+                        <p id="pvCavalier">100</p>
+                    </span>
+                </div>
+                <div class="Ennemis_2">
+                    <img src="dark_soldier-lord (2).png">
+                    <span id="statsEnnemis2">Chevalier noir PV :
+                        <p id="pvChevaliernoir">120</p>
+                    </span>
+                </div>
+                <div class="Ennemis_3">
+                    <img src="dark_soldier-overlord (2).png">
+                    <span id="statsEnnemis3">Soldat royal PV :
+                        <p id="pvSoldatroyal">110</p>
+                    </span>
+                </div>
+            </div>
+
+
+            </div>
+            <div class="Personnages">
+                <div class="Heros_1">
+                    <img src="blordrough_quartermaster (2).jpg">
+                    <span id="statsheros1">:
+                        <p id="pvRyuk">pv Ryuk: 60</p>
+                        <p id="manaRyuk">mana Ryuk: 60
+                        </p>
+                    </span>
+                </div>
+                <div class="Heros_4">
+                    <img src="sara-cal2 (2).jpg">
+                    <span id="statsheros4">
+                        
+                        <p id="pvSana">Sana pv: 45</p>
+                        <p id="manaSana">Sana mana: 70
+                        </p>
+                    </span>
+                </div>
+                <div class="Heros_3">
+                    <img src="blordrough_storm_trooper (2).jpg">
+                    <span id="statsheros3">
+                        <p id="pvIzaru">pv Izaru: 50</p>
+                        <p id="manaIzaru">mana Izaru: 50</p>
+                        </p>
+                    </span>
+                </div>
+                <div class="Heros_2">
+                    <img src="blordrough_corporal (2).jpg">
+                    <span id="statsheros2"> 
+                        <p id="pvGalio">pv Galio: 50</p>
+                        <p id="manaGalio">mana Galio: 50
+                        </p>
+                    </span>
+                </div>        
+            </div>
+            <div class="dialogue">
+                <p> action: </p>
+
+            </div>
+        </body>
+    
+</html>
